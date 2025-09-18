@@ -6,7 +6,7 @@ Megan Kung, Equity Data Specialist, OPEETA, State Water Resources Control Board,
 
 Areas of interest to the Water Boards often do not align with Census-designated boundaries, making it difficult to estimate the demographics of a population within areas being considered for Water Board actions, such as watersheds, drinking water systems, or contaminated groundwater plumes. Following the methodology of USEPA's EJScreen version 2.3 ([mirror site](https://pedp-ejscreen.azurewebsites.net/)), the Water Boards' ArcGIS Summarize Demographics tool allows staff to easily create demographic summaries for one or multiple areas of interest.
 
-Specifically, the tool estimates total population and population-weighted averages of 2023 median household income, race, and languages spoken at home for those who speak English "not very well" within user-specified boundaries.
+Specifically, the tool estimates total population and population-weighted averages of 2023 median household income, race, and languages spoken. Of the language variables, two sets of percentages are included: 1) of the total households in a given area, the percentages of languages spoken among limited-English proficiency speakers (those who speak English "not very well"), and 2) of the total limited-English proficency households in a given area, the percentage of languages spoken.
 
 ### Files in zipped CA_Demographic_Analysis folder
 
@@ -18,7 +18,7 @@ Specifically, the tool estimates total population and population-weighted averag
 
 ### Package layers
 
-The **CA_Demographics_2023** layer contains data on 2023 median household income, race, and languages spoken at home for those who speak English "not very well". This data was compiled from the 5-year 2019-2023 U.S. Census American Community Survey. Also included is a variable for disadvantaged community status by block group. The definition of disadvantaged community follows Water Code 79505.5, where a community with an annual median household income less than 80% of the statewide median household income is considered disadvantaged, and a community with an annual median income less than 60% is considered severely disadvantaged. Income and race data were collected at the block group level, and language data was collected at the census tract level.
+The **CA_Demographics_2023** layer contains data on 2023 median household income, race, and languages spoken. Of the language variables, two sets of percentages are included: 1) of the total households in a given area, the percentages of languages spoken among limited-English proficiency speakers (those who speak English "not very well"), and 2) of the total limited-English proficency households in a given area, the percentage of languages spoken. This data was compiled from the 5-year 2019-2023 U.S. Census American Community Survey. Also included is a variable for disadvantaged community status by block group. The definition of disadvantaged community follows Water Code 79505.5, where a community with an annual median household income less than 80% of the statewide median household income is considered disadvantaged, and a community with an annual median income less than 60% is considered severely disadvantaged. Income and race data were collected at the block group level, and language data was collected at the census tract level.
 
 The **Tribal_Lands_and_Tracts** layer is a union of two layers, PRO_Indian_Lands and PRO_Tracts_All, from the Pacific Region Office of the Bureau of Indian Affairs.
 
@@ -80,7 +80,7 @@ When the user specifies analysis boundaries that do not align with Census bounda
 ### Data Dictionary
 
 | Variable | Description |
-|------------------------------------|------------------------------------|
+|----|----|
 | TotalPop | Total population |
 | MHI23 | Median Household Income |
 | White | White (non-Hispanic) |
@@ -100,20 +100,33 @@ When the user specifies analysis boundaries that do not align with Census bounda
 | Mixed_Perc | Percent mixed race (non-Hispanic) |
 | Hisp_Perc | Percent Hispanic |
 | English_Only_Perc | Percent households where only English is spoken |
-| Spanish_Perc | Percent Spanish-speaking households where English is spoken "not very well" |
-| French_Haitian_Cajun_Perc | Percent French, Haitian, and Cajun-speaking households where English is spoken "not very well" |
-| German_WestGermanic_Perc | Percent German and West-Germanic-speaking households where English is spoken "not very well" |
-| Russian_Polish_Slavic_Perc | Percent Russian, Polish, and Slavic-speaking households where English is spoken "not very well" |
-| OtherIndoEuro_Perc | Percent other Indo-European-speaking households where English is spoken "not very well" |
-| Korean_Perc | Percent Korean-speaking households where English is spoken "not very well" |
-| Chinese_Perc | Percent Chinese-speaking households where English is spoken "not very well" |
-| Vietnamese_Perc | Percent Vietnamese-speaking households where English is spoken "not very well" |
-| Tagalog_incl_Filipino_Perc | Percent Tagalog including Filipino-speaking households where English is spoken "not very well" |
-| OtherAsianPacIsl_Perc | Percent other Asian Pacific Islander-speaking households where English is spoken "not very well" |
-| Arabic_Perc | Percent Arabic-speaking households where English is spoken "not very well" |
-| OtherLang_Perc | Percent other language-speaking households where English is spoken "not very well" |
+| Spanish_Perc | Of total households, percentage of Spanish-speaking households where English is spoken "not very well" |
+| French_Haitian_Cajun_Perc | Of total households, percentage of French, Haitian, and Cajun-speaking households where English is spoken "not very well" |
+| German_WestGermanic_Perc | Of total households, percentage of German and West-Germanic-speaking households where English is spoken "not very well" |
+| Russian_Polish_Slavic_Perc | Of total households, percentage of Russian, Polish, and Slavic-speaking households where English is spoken "not very well" |
+| OtherIndoEuro_Perc | Of total households, percentage of other Indo-European-speaking households where English is spoken "not very well" |
+| Korean_Perc | Of total households, percentage of Korean-speaking households where English is spoken "not very well" |
+| Chinese_Perc | Of total households, percentage of Chinese-speaking households where English is spoken "not very well" |
+| Vietnamese_Perc | Of total households, percentage of Vietnamese-speaking households where English is spoken "not very well" |
+| Tagalog_incl_Filipino_Perc | Of total households, percentage of Tagalog including Filipino-speaking households where English is spoken "not very well" |
+| OtherAsianPacIsl_Perc | Of total households, percentage of other Asian Pacific Islander-speaking households where English is spoken "not very well" |
+| Arabic_Perc | Of total households, percentage of Arabic-speaking households where English is spoken "not very well" |
+| OtherLang_Perc | Of total households, percentage of other language-speaking households where English is spoken "not very well" |
+| LEP_Perc | Percent of total households with limited English proficiency, or where English is spoken "not very well" |
+| LEP_Spanish_Perc | Of limited-English-proficiency households, percentage Spanish-speaking |
+| LEP_French_Haitian_Cajun_Perc | Of limited-English-proficiency households, percentage French, Haitian, and Cajun-speaking |
+| LEP_German_WestGermanic_Perc | Of limited-English-proficiency households, percentage German and West-Germanic-speaking |
+| LEP_Russian_Polish_Slavic_Perc | Of limited-English-proficiency households, percentage Russian, Polish, and Slavic-speaking |
+| LEP_OtherIndoEuro_Perc | Of limited-English-proficiency households, percentage other Indo-European-speaking |
+| LEP_Korean_Perc | Of limited-English-proficiency households, percentage Korean-speaking |
+| LEP_Chinese_Perc | Of limited-English-proficiency households, percentage Chinese-speaking |
+| LEP_Vietnamese_Perc | Of limited-English-proficiency households, percentage Vietnamese-speaking |
+| LEP_Tagalog_incl_Filipino_Perc | Of limited-English-proficiency households, percentage Tagalog including Filipino-speaking |
+| LEP_OtherAsianPacIsl_Perc | Of limited-English-proficiency households, percentage other Asian Pacific Islander-speaking |
+| LEP_Arabic_Perc | Of limited-English-proficiency households, percentage Arabic-speaking |
+| LEP_OtherLang_Perc | Of limited-English-proficiency households, other language-speaking |
 | Num_of_blocks | Number of blocks used to estimate total population and averages of demographic variables; only included in output table from Summarize Demographics tool |
 
 ### Feedback
 
-Please fill out this [survey](https://forms.gle/c6PiRo5QfR6wQDEE9) to let me know how the tool worked for you!
+Please fill out this [survey](https://forms.gle/Ykixy6iByAAcf6DF9) to let me know if the tool worked for you and if you have any questions or comments!

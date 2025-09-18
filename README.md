@@ -74,13 +74,12 @@ When the user specifies analysis boundaries that do not align with Census bounda
 ### Notes
 
 -   CalEnviroscreen 4.0 scores were not incorporated due to its use of 2019 data, which was based on Census boundaries that differ from 2023. OPEETA staff plan on incorporating CES scores when CalEnviroscreen is next updated.
--   Language percent variables reflect percent of total households. OPEETA staff plan on incorporating language variables as percent of limited-English speaking households in the next release.
 -   The summarized MHI23 (median household income 2023) value in the tool output is the population-weighted mean value of median household income. Due to data limitations, the actual median household income is not estimated, but the estimated mean income value is a reasonable approximation. In areas where the income distribution is more skewed, i.e. there are relatively few people with incomes that are much higher or lower than everyone else, the mean value will differ more from the median.
 
 ### Data Dictionary
 
 | Variable | Description |
-|----|----|
+|------------------------------------|------------------------------------|
 | TotalPop | Total population |
 | MHI23 | Median Household Income |
 | White | White (non-Hispanic) |
